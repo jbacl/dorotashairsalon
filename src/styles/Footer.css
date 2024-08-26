@@ -1,0 +1,39 @@
+.footer {
+  padding: 30px;
+  background-color: black;
+  color: white;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contactInfo, .hours, .socialLinks {
+  width: 30%; /* Adjust this to fit your design */
+  margin-bottom: 20px;
+}
+
+.hours h3, .contactInfo h3, .socialLinks h3 {
+  margin-bottom: 10px;
+}
+
+.footerNote {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+  .contactInfo, .hours, .socialLinks {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+}

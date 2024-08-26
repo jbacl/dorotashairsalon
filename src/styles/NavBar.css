@@ -1,0 +1,159 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 125px;
+  font-family: 'Lucida Sans', cursive;
+}
+
+.navbar .leftSide button {
+  color: whitesmoke;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Lucida Sans', cursive;
+  height: auto;
+  font-size: 50px;
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  list-style: none;
+  font-style: italic;
+}
+
+.navbar .rightSide a:hover {
+  color: gray;
+  opacity: 0.6;
+  transition: 0.8s;
+}
+
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  flex: 50%;
+}
+
+.navbar .rightSide button:hover {
+  color: gray;
+  opacity: 0.6;
+  transition: 0.8s;
+}
+
+.navbar .rightSide svg {
+  font-size: 40px;
+}
+
+.navbar #open .hiddenLinks:hover {
+  color: gray;
+}
+
+.navbar #open {
+  padding-left: 0px;
+  margin-left: -50px;
+}
+
+.navbar #open button {
+  display: none;
+}
+
+.navbar #open button:hover {
+  display: none;
+}
+
+.navbar #close button {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-right: 0px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+.navbar #open .hiddenLinks a:hover {
+  color: gray;
+  opacity: 0.6;
+  transition: 0.8s;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+      width: 70px;
+  }
+  .navbar .leftSide {
+      padding-left: 50px;
+  }
+  .navbar .leftSide button {
+      font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .navbar .leftSide button {
+      font-size: 30px;
+  }
+  .navbar .rightSide a {
+      display: none;
+  }
+  .navbar .rightSide {
+      justify-content: flex-end;
+      padding-right: 70px;
+  }
+  .navbar .rightSide button {
+      display: inherit;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+      display: none;
+  }
+  .hiddenLinks {
+      display: none;
+  }
+  .navbar #open button {
+      display: none;
+  }
+  .navbar #open .hiddenLinks {
+      display: none;
+  }
+}
