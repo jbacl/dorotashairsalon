@@ -12,9 +12,9 @@ deploy_to_ec2:
     - echo "Deploying to EC2..."
     - ssh -i ~/.ssh/id_rsa ubuntu@ec2-3-135-223-80.us-east-2.compute.amazonaws.com "
         cd /home/ubuntu/my-project &&
-        git pull origin main &&
+        git pull origin master &&
         npm install &&
         pm2 restart all
       "
   only:
-    - main
+    - master
