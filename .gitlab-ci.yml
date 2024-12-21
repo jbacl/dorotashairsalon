@@ -1,0 +1,20 @@
+stages:
+  - deploy
+
+deploy_to_ec2:
+  stage: deploy
+  script:
+    - echo "Setting up SSH..."
+    - mkdir -p ~/.ssh
+    - echo "$DEPLOY_SSH_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H your-ec2-instance-ip >> ~/.ssh/known_hosts
+    - echo "Deploying to EC2..."
+    - ssh -i ~/.ssh/id_rsa ec2-user@your-ec2-instance-ip "
+        cd /home/ec2-user/my-project &&
+        git pull origin main &&
+        npm install &&
+        pm2 restart all
+      "
+  only:
+    - main
