@@ -14,7 +14,7 @@ deploy_to_ec2:
         cd /home/ubuntu/dorotashairsalon &&
         git pull origin master &&
         npm install &&
-        pm2 restart all
+        sudo systemctl restart dorotashairsalon
       "
   only:
     - master
