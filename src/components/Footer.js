@@ -9,7 +9,7 @@ function Footer() {
         <div className='contactInfo'>
           <h3>Contact Us</h3>
           <p>Phone: (860) 846-0438</p>
-          <p>Address: 260 East St, Plainville, CT, United States, Connecticut</p>
+          <p>Address: 1600 Southeast Road, Farmington, CT, United States, Connecticut</p>
         </div>
         <div className='hours'>
           <h3>Hours of Operation</h3>
