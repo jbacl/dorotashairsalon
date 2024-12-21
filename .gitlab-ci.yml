@@ -5,7 +5,7 @@ deploy_to_ec2:
   stage: deploy
   script:
     - echo "Checking PEM Key..."
-    - echo "$DEPLOY_SSH_KEY"
+    - echo "$DEPLOY_SSH_KEY" | head -c 50
     - echo "Setting up SSH..."
     - mkdir -p ~/.ssh
     - echo "$DEPLOY_SSH_KEY" > ~/.ssh/id_rsa
