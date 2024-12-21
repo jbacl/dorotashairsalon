@@ -14,10 +14,12 @@ deploy_to_ec2:
         cd /home/ubuntu/dorotashairsalon &&
         git pull origin master &&
         npm install &&
-        sudo systemctl restart dorotashairsalon
+        sudo systemctl restart frontend.service &&
+        sudo systemctl restart backend.service
       "
   only:
     - master
+
 
 
 
