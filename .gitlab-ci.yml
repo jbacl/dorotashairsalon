@@ -16,7 +16,7 @@ deploy_to_ec2:
         /usr/bin/git pull origin master && \
         npm install && \
         sudo systemctl restart frontend.service && \
-        sudo systemctl restart backend.service"
+        sudo systemctl restart backend.service
       "
   only:
     - master
