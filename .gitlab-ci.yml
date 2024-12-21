@@ -1,3 +1,6 @@
+stages:
+  - deploy
+
 deploy_to_ec2:
   stage: deploy
   script:
@@ -8,12 +11,14 @@ deploy_to_ec2:
     - ssh-keyscan -H 3.135.223.80 >> ~/.ssh/known_hosts
     - echo "Deploying to EC2..."
     - ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@ec2-3-135-223-80.us-east-2.compute.amazonaws.com "
-        cd /home/ubuntu/my-project &&
+        cd /home/ubuntu/dorotashairsalon &&
         git pull origin main &&
+        cd hair-salon-backend &&
         npm install &&
-        pm2 restart all
+        pm2 restart all || pm2 start server.js
       "
   only:
     - main
+
 
 
