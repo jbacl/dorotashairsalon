@@ -38,7 +38,7 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/feedback')
+    fetch('https://www.dorotashairsalon.com/api/feedback')
         .then(response => response.json())
         .then(data => setFeedbacks(data))
         .catch(error => console.error('Error fetching feedback:', error));
