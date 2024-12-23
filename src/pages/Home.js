@@ -38,7 +38,7 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/feedback')
+    fetch('https://www.dorotashairsalon.com/api/feedback')
         .then(response => response.json())
         .then(data => setFeedbacks(data))
         .catch(error => console.error('Error fetching feedback:', error));
@@ -98,7 +98,7 @@ function Home() {
       <div ref={aboutSectionRef} className={`aboutSection fade-in ${aboutVisible ? 'visible' : ''}`}>
         <div className="aboutContent">
             <h2>About Us</h2>
-            <p>Welcome to 1600 Southeast Road, the proud home of Dorota's Hair Salon. Since opening our doors in 2024, we've been dedicated to providing exceptional hair care services in a warm and inviting atmosphere. Our team of skilled stylists is passionate about helping you look and feel your best, offering personalized consultations to ensure that every service is tailored to your unique style and needs.</p>
+            <p>Welcome to 1600 Southeast Road, the proud home of Dorota's Hair Salon. Since opening our doors in 2007, we've been dedicated to providing exceptional hair care services in a warm and inviting atmosphere. Our team of skilled stylists is passionate about helping you look and feel your best, offering personalized consultations to ensure that every service is tailored to your unique style and needs.</p>
             <p>Here, we believe in the power of transformation, whether it's through a fresh cut, a bold new color, or a complete makeover. We use only the highest quality products and stay up-to-date with the latest trends and techniques to deliver results that exceed your expectations.</p>
             <p>Come experience the difference at Dorota's Hair Salon, where every visit is more than just an appointment – it's an experience. We look forward to welcoming you and making your hair dreams come true.</p>
         </div>
