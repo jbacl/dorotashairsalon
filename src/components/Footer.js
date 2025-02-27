@@ -23,7 +23,7 @@ function Footer() {
             <SocialMedia />
         </div>
       </div>
-      <p className='footerNote'>&copy; 2024 Dorota's Hair Salon. All rights reserved.</p>
+      <p className='footerNote'>&copy; 2025 Dorota's Hair Salon. All rights reserved.</p>
     </footer>
   );
 }
